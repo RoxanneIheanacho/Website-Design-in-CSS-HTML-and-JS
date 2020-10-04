@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+html, body, header, nav, main, footer, div, section, article, aside {margin:0; padding:0;}
+header, nav, main, footer, section, article, aside {color: pink; display:block;}
+body {background-position: center; background-image:url("nighsky.jpg");}
+a {color:#000;}
+a:link, a:visited {}
+a:hover, a:active {background-color: black;}
+
+html, body {height: 100%;}
+
+body {background-color:black; color:#000; font-family:Verdana, Geneva, sans-serif; font-size:15px;
+	display:grid;
+	grid-template-rows: min-content auto min-content;
+	grid-template-columns: auto minmax(300px,900px) auto;
+	grid-template-areas:
+		".	header	."
+		".	main	."
+		"footer	footer	footer";}
+
+header {grid-area:header; color: pink; background-color:black; box-shadow:5px 5px 10px #999, -5px 5px 10px #999; margin-bottom:10px;}
+header h1 {color: pink; background-color: black;}
+header h1, header h2, header h3 {color: pink; margin:0; padding:10px;}
+
+main {grid-area:main; padding:10px;}
+main h2, main h3, main h4 {color: pink;}
+main h2 {border-bottom:3px double black;}
+#container {background-color: black;}
+footer {grid-area:footer; background-color:Dodgerblue; border-top:1px solid #F90; box-shadow:0px -5px 10px #999;
+	padding:4px; text-align:center;}
+
+hr {clear:both;}
+
+@media screen and (max-width:400px) {
+	header h1, header h2, header h3 {font-size:1em;}
+}
+
+
+#grass { position: absolute; background-position: center;  background-image: url("backgroundpicture.png"); width:800px; height:500px; background-color:Dodgerblue; color:#000; position:relative;}
+
+#bug {width:80px; height:auto; position:absolute; top:0px; left:0px; z-index:1;}
+
+#corona {width:40px; height:40px; position:absolute; top:0px; left:0px; visibility:hidden; z-index:2;}
+
+#coronanumber, #coronacounter {font-size:200%; color: pink}
+
+#newgame {color: white; background-color: purple; border-radius: 2rem; font-size:20px;}
+#endgame {color: white; background-color: purple; border-radius: 2rem; font-size:20px;}
